@@ -1,0 +1,36 @@
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Cyber Policy Insights</h3>
+          <p>Analyzing cybersecurity frameworks and regulatory compliance</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <ul>
+            {% for item in site.data.navigation %}
+            <li><a href="{{ item.url | relative_url }}">{{ item.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://twitter.com/username">Twitter</a></li>
+            <li><a href="https://linkedin.com/in/username">LinkedIn</a></li>
+            <li><a href="mailto:contact@example.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        &copy; {{ 'now' | date: "%Y" }} Ronnie Bailey. All rights reserved.
+      </div>
+    </div>
+  </footer>
+  
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Cyber Policy Intelligence</h1>
+    <p>Analysis of regulatory frameworks & security governance</p>
+    <a href="/blog" class="btn">Explore Articles</a>
+  </div>
+</section>
+
+<section class="featured-posts">
+  <h2>Latest Research</h2>
+  <div class="post-grid">
+    {% for post in site.posts limit:3 %}
+      {% include widgets/post-card.html post=post %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="tag-cloud-section">
+  <h2>Explore by Topic</h2>
+  {% include widgets/tag-cloud.html %}
+</section>

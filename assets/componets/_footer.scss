@@ -1,0 +1,57 @@
+.site-footer {
+  background-color: lighten($dark, 5%);
+  color: rgba(white, 0.7);
+  padding: 3rem 0 1.5rem;
+  margin-top: 4rem;
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-section {
+    h3, h4 {
+      color: white;
+      margin-top: 0;
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    h4 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      
+      li {
+        margin-bottom: 0.5rem;
+        
+        a {
+          color: rgba(white, 0.7);
+          text-decoration: none;
+          
+          &:hover {
+            color: white;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  
+  .copyright {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(white, 0.1);
+    font-size: 0.9rem;
+    color: rgba(white, 0.5);
+  }
+}

@@ -1,0 +1,11 @@
+- name: "Zero Trust"
+  tags: ["Cloud Security", "Surveillance Pricing", "Data Privacy"]
+  
+- name: "Identity Management"
+  tags: ["AI Regulation", "Compliance", "Threat Analysis"]
+  
+- name: "Incident Response"
+  tags: ["Policy Analysis", "Facial Recognition", "Retail Surveillance"]
+  
+- name: "Vendors & Regulations"
+  tags: ["CrowdStrike", "Kroger", "FTC", "GDPR", "Microsoft", "Azure", "AWS", "Okta"]

@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<article class="tag-archive">
+  <header>
+    <h1>Popular Topics</h1>
+  </header>
+  
+  {% include widgets/tag-cloud.html %}
+  
+  {% for category in site.data.categories %}
+  <section class="tag-category">
+    <h2>{{ category.name }}</h2>
+    
+    {% for tag_name in category.tags %}
+      {% assign tag_posts = site.tags[tag_name] %}
+      {% if tag_posts %}
+      <div class="tag-section" id="{{ tag_name | slugify }}">
+        <h3>{{ tag_name }}</h3>
+        <ul class="post-list">
+          {% for post in tag_posts %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </section>
+  {% endfor %}
+</article>

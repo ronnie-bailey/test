@@ -1,0 +1,81 @@
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.post-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  
+  .post-card-content {
+    padding: 1.5rem;
+    
+    h3 {
+      margin-top: 0;
+      font-size: 1.35rem;
+      
+      a {
+        color: $primary;
+        text-decoration: none;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    .post-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      color: $gray;
+      margin-bottom: 1rem;
+      
+      time {
+        font-weight: 500;
+      }
+      
+      .post-tags {
+        a {
+          background: lighten($accent, 35%);
+          color: darken($accent, 20%);
+          padding: 0.2rem 0.6rem;
+          border-radius: 4px;
+          font-size: 0.8rem;
+          text-decoration: none;
+          margin-left: 0.3rem;
+          
+          &:hover {
+            background: $accent;
+            color: white;
+          }
+        }
+      }
+    }
+    
+    p {
+      margin-bottom: 1.5rem;
+    }
+    
+    .read-more {
+      color: $accent;
+      font-weight: 600;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

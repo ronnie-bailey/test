@@ -1,0 +1,27 @@
+/* ===== VARIABLES ===== */
+$primary: #0d3b66;
+$accent: #00b4d8;
+$light: #f8f9fa;
+$dark: #212529;
+$gray: #6c757d;
+
+/* ===== BASE STYLES ===== */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: $dark;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Import component partials */
+@import "components/header";
+@import "components/hero";
+@import "components/cards";
+@import "components/tags";
+@import "components/footer";

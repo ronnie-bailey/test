@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1>{{ page.title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %d, %Y" }}
+      </time>
+      <div class="post-tags">
+        {% for tag in page.tags %}
+          <a href="{{ '/tags' | relative_url }}#{{ tag | slugify }}">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    {{ content }}
+  </div>
+  
+  <div class="post-footer">
+    <h3>Related Articles</h3>
+    <div class="related-posts">
+      {% assign related = site.related_posts | sample: 2 %}
+      {% for post in related %}
+        {% include widgets/post-card.html post=post %}
+      {% endfor %}
+    </div>
+  </div>
+</article>
