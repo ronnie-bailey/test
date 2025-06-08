@@ -1,0 +1,24 @@
+title: Cyber Policy Insights
+description: Analysis of cybersecurity regulations and frameworks
+url: ""  # Leave empty for GitHub Pages
+baseurl: ""  # Changed to empty for repository named "test"
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+collections:
+  categories:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
