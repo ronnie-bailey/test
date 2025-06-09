@@ -27,3 +27,13 @@ title: Home
     <span class="tag">AWS</span>
   </p>
 </section>
+
+<section class="container">
+  <h2>Recent Posts</h2>
+  {% for post in site.posts limit:3 %}
+    <div class="card">
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+    </div>
+  {% endfor %}
+</section>
