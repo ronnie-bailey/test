@@ -1,11 +1,9 @@
 ---
 ---
 
-@import "minima";
-
-/* Custom Styles */
-@import "components/header";
-@import "components/hero";
-@import "components/cards";
-@import "components/tags";
-@import "components/footer";
+@import "header";
+@import "footer";
+@import "hero";
+@import "tags";
+@import "cards";
+@import "custom";
